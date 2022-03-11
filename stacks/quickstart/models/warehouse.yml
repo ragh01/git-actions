@@ -1,0 +1,10 @@
+# Template for sandalone warehouses
+roles:
+  - name: "{{workspace_name}}"
+warehouses:
+  - name: "{{workspace_name}}"
+    parameters:
+      - name: WAREHOUSE_SIZE
+        value: "XSMALL"
+      - name: INITIALLY_SUSPENDED
+        value: true

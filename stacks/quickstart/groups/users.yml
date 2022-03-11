@@ -1,0 +1,91 @@
+# Our list of users. Can also be backed by LDAP
+model:
+  name: user
+
+members:
+    # NOTE: The properties password and must_change_password are only applied on first run
+    # and cannot be updated by tram after the user has been created. You can reset a users
+    # password from the console as follows:
+    #  ALTER USER <USER> SET password = '<PASSWORD>' must_change_password = true;
+  - username: raghav
+    email: rmittal@phdata.io
+    password: Raghav123
+    env: dev
+    MUST_CHANGE_PASSWORD: "TRUE"
+    DEFAULT_PASSWORD: "Raghav123"
+    deprovision: true
+  - username: lavanya
+    email: lavanyas@phdata.io
+    password: Raghav123
+    env: dev
+    MUST_CHANGE_PASSWORD: "TRUE"
+    HAS_PASSWORD: true
+    DEFAULT_PASSWORD: "Raghav123"
+  - username: test
+    email: test@phdata.io
+    env: dev
+    MUST_CHANGE_PASSWORD: "TRUE"
+    DEFAULT_PASSWORD: "Raghav123"
+  - username: hiresh
+    email: hroy@phdata.io
+    env: dev
+    MUST_CHANGE_PASSWORD: true
+    DEFAULT_PASSWORD: "Raghav123"
+  - username: noor
+    email: mn@phdata.io
+    env: dev
+    MUST_CHANGE_PASSWORD: true
+    DEFAULT_PASSWORD: "Raghav123"
+  - username: vaish
+    email: mn@phdata.io
+    env: dev
+    deprovision: true
+    MUST_CHANGE_PASSWORD: false
+    DEFAULT_PASSWORD: "Raghav123"
+  - username: arpit
+    email: arpit@phdata.io
+    env: dev
+    MUST_CHANGE_PASSWORD: false
+    DEFAULT_PASSWORD: "Raghav123"
+  - username: cr7
+    email: cr7@mufc.in
+    env: dev
+    MUST_CHANGE_PASSWORD: false
+    DEFAULT_PASSWORD: "Raghav123"
+  - username: salah
+    email: salah@lfc.in
+    deprovision: true
+    env: dev
+    MUST_CHANGE_PASSWORD: false
+    DEFAULT_PASSWORD: "Raghav123"
+  - username: kdb
+    email: kdb@mcfc.in
+    env: dev
+    MUST_CHANGE_PASSWORD: false
+    DEFAULT_PASSWORD: "Raghav123"
+  - username: chotu_mandi
+    email: mandi@chotu.com
+    env: dev
+    MUST_CHANGE_PASSWORD: false
+    DEFAULT_PASSWORD: "Raghav123"
+  - username: pogba
+    email: pogba@pogba.com
+    env: dev
+    deprovision: true 
+    MUST_CHANGE_PASSWORD: false
+    DEFAULT_PASSWORD: "Raghav123"
+  - username: chelsea
+    email: chelsea@cfc.com
+    env: dev
+    MUST_CHANGE_PASSWORD: false
+    DEFAULT_PASSWORD: "Raghav123"
+  - username: st-temp
+    email: st-temp@cfc.com
+    env: dev
+    MUST_CHANGE_PASSWORD: false
+    DEFAULT_PASSWORD: "Raghav123"
+  - username: jiit
+    email: jiit@cfc.com
+    env: dev
+    MUST_CHANGE_PASSWORD: false
+    DEFAULT_PASSWORD: "Raghav123"

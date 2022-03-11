@@ -1,0 +1,20 @@
+# Template for users and user databases
+users:
+  - name: "{{username}}"
+    parameters:
+      - name: EMAIL
+        value: "'{{email}}'"
+      - name: DEFAULT_ROLE
+        value: "dev_User_RO"
+      - name: LOGIN_NAME
+        value: "'{{username}}'"
+      - name: PASSWORD
+        value: "'ABC123abc'"
+      - name: MUST_CHANGE_PASSWORD
+        value: false
+roleGrants:
+  - name: "dev_User_RO"
+    users:
+      - "{{username}}"
+
+  #user doesnt needs a database,no roles 

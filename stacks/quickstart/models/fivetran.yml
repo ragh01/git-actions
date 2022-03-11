@@ -1,0 +1,205 @@
+roles:
+  - name: "dev_ST_admin"
+  # - name: "prod_ST_admin"
+  - name: "dev_Source_RO"
+  - name: "dev_Source_RW"
+  # - name: "prod_Source_RW"
+  - name: "dev_Transform_RO"
+  - name: "dev_Transform_RW"
+  # - name: "prod_Transform_RW"
+  - name: "dev_Business_Domain_Product_RO"
+  - name: "dev_Business_Domain_Product_RW"
+  # - name: "prod_Business_Domain_Product_RW"
+  - name: "dev_User_RO"
+  # - name: "prod_User_RO"
+privileges:
+  - privilege: "ALL PRIVILEGES"
+    objectType: "WAREHOUSE"
+    objectName: "{{workspace_name}}"
+    roleName: "dev_ST_admin"
+    grantOption: true
+
+  - privilege: "ALL PRIVILEGES"
+    objectType: "DATABASE"
+    objectName: "{{workspace_name}}_source"
+    # objectName: "{{workspace_name}}_DB "
+    roleName: "dev_ST_admin"
+    grantOption: true
+
+  - privilege: "ALL PRIVILEGES"
+    objectType: "DATABASE"
+    objectName: "{{workspace_name}}_transform"
+    roleName: "dev_ST_admin"
+    grantOption: true
+
+  - privilege: "USAGE"
+    objectType: "WAREHOUSE"
+    objectName: "{{workspace_name}}"
+    roleName: "dev_Source_RO"
+    grantOption: false
+
+  - privilege: "USAGE"
+    objectType: "DATABASE"
+    objectName: "{{workspace_name}}_source"
+    roleName: "dev_Source_RO"
+    grantOption: false
+
+  - privilege: "USAGE"
+    objectType: "ALL SCHEMAS IN DATABASE"
+    objectName: "{{workspace_name}}_source"
+    roleName: "dev_Source_RO"
+    grantOption: false
+
+  - privilege: "SELECT"
+    objectType: "FUTURE TABLES IN DATABASE"
+    objectName: "{{workspace_name}}_source"
+    roleName: "dev_Source_RO"
+    grantOption: false
+
+  - privilege: "USAGE"
+    objectType: "WAREHOUSE"
+    objectName: "{{workspace_name}}"
+    roleName: "dev_Source_RW"
+    grantOption: false
+
+  - privilege: "USAGE"
+    objectType: "DATABASE"
+    objectName: "{{workspace_name}}_source"
+    roleName: "dev_Source_RW"
+    grantOption: false
+
+  - privilege: "ALL PRIVILEGES"
+    objectType: "ALL SCHEMAS IN DATABASE"
+    objectName: "{{workspace_name}}_source"
+    roleName: "dev_Source_RW"
+    grantOption: false
+
+  - privilege: "USAGE"
+    objectType: "WAREHOUSE"
+    objectName: "{{workspace_name}}"
+    roleName: "dev_Transform_RO"
+    grantOption: false
+
+  - privilege: "USAGE"
+    objectType: "DATABASE"
+    objectName: "{{workspace_name}}_transform"
+    roleName: "dev_Transform_RO"
+    grantOption: false
+
+  - privilege: "USAGE"
+    objectType: "ALL SCHEMAS IN DATABASE"
+    objectName: "{{workspace_name}}_transform"
+    roleName: "dev_Transform_RO"
+    grantOption: false
+
+  - privilege: "SELECT"
+    objectType: "FUTURE TABLES IN DATABASE"
+    objectName: "{{workspace_name}}_transform"
+    roleName: "dev_Transform_RO"
+    grantOption: false
+
+  - privilege: "USAGE"
+    objectType: "WAREHOUSE"
+    objectName: "{{workspace_name}}"
+    roleName: "dev_Business_Domain_Product_RO"
+    grantOption: false
+
+  - privilege: "USAGE"
+    objectType: "DATABASE"
+    objectName: "{{workspace_name}}_source"
+    roleName: "dev_Business_Domain_Product_RO"
+    grantOption: false
+
+  - privilege: "USAGE"
+    objectType: "ALL SCHEMAS IN DATABASE"
+    objectName: "{{workspace_name}}_source"
+    roleName: "dev_Business_Domain_Product_RO"
+    grantOption: false
+
+  - privilege: "SELECT"
+    objectType: "FUTURE TABLES IN DATABASE"
+    objectName: "{{workspace_name}}_source"
+    roleName: "dev_Business_Domain_Product_RO"
+    grantOption: false
+
+  - privilege: "ALL PRIVILEGES"
+    objectType: "ALL SCHEMAS IN DATABASE"
+    objectName: "{{workspace_name}}_source"
+    roleName: "dev_Business_Domain_Product_RW"
+    grantOption: false
+
+  - privilege: "ALL PRIVILEGES"
+    objectType: "ALL SCHEMAS IN DATABASE"
+    objectName: "{{workspace_name}}_transform"
+    roleName: "dev_Transform_RW"
+    grantOption: false
+
+  - privilege: "USAGE"
+    objectType: "WAREHOUSE"
+    objectName: "{{workspace_name}}"
+    roleName: "dev_User_RO"
+    grantOption: false
+
+  - privilege: "USAGE"
+    objectType: "DATABASE"
+    objectName: "{{workspace_name}}_source"
+    roleName: "dev_User_RO"
+    grantOption: false
+
+  - privilege: "USAGE"
+    objectType: "ALL SCHEMAS IN DATABASE"
+    objectName: "{{workspace_name}}_source"
+    roleName: "dev_User_RO"
+    grantOption: false
+
+  - privilege: "SELECT"
+    objectType: "FUTURE TABLES IN DATABASE"
+    objectName: "{{workspace_name}}_source"
+    roleName: "dev_User_RO"
+    grantOption: false
+
+
+databases:
+  - name: "{{workspace_name}}_source"
+    schemas:
+      - name: "RAW"
+      - name: "STAGE"
+  - name: "{{workspace_name}}_transform"
+    schemas:
+      - name: "RAW"
+      - name: "STAGE"
+
+warehouses:
+  - name: "{{workspace_name}}"
+    parameters:
+      - name: WAREHOUSE_SIZE
+        value: "XSMALL"
+      - name: INITIALLY_SUSPENDED
+        value: true
+
+roleGrants:
+  - name: "dev_Source_RO"
+    roles:
+      - "dev_Source_RW"
+  - name: "dev_Source_RW"
+    roles:
+      - "dev_ST_admin"
+  - name: "dev_Transform_RO"
+    roles:
+      - "dev_Transform_RW"
+  - name: "dev_Transform_RW"
+    roles:
+      - "dev_ST_admin"
+  - name: "dev_Business_Domain_Product_RO"
+    roles:
+      - "dev_Business_Domain_Product_RW" 
+  - name: "dev_Business_Domain_Product_RW"
+    roles:
+      - "dev_ST_admin"
+  - name: "dev_{{User}}_RO"
+    roles:
+      - "dev_ST_admin" 
+  - name: "dev_ST_admin"
+    roles:
+      - "SYSADMIN" 
+     

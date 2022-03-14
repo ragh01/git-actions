@@ -14,7 +14,7 @@ jobs:
       - run: chmod +x bin/tram-dry-run
       - run: echo $JAVA_HOME
       - run: export JAVA_HOME=${{env.JAVA_HOME}}
-      - run: echo ${{./env.STACK_PATH}}
+      - run: echo ${{env.STACK_PATH}}
 #       - run: bin/tram-dry-run
       - run: echo "🔎 The name of your branch is main and your repository is git-actions."
       - name: Check out repository code

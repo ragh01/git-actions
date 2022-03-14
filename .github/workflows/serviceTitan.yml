@@ -22,7 +22,8 @@ jobs:
       - run: export JAVA_HOME=${{env.JAVA_HOME}}
       - run: echo ${{env.STACK_PATH}}
       - run: echo $STACK_PATH
-      - run: bin/tram-dry-run
+      - run: ./bin/tram-dry-run
+      - run: ./bin/tram-provision
       - run: echo "🔎 The name of your branch is main and your repository is git-actions."
       - name: Check out repository code
         uses: actions/checkout@v2

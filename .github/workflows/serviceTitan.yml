@@ -4,7 +4,8 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - run: bin/tram-fetch
+      - run: ls
+#       - run: bin/tram-fetch
 #       - run: bin/tram-dry-run
       - run: echo "🔎 The name of your branch is main and your repository is git-actions."
       - name: Check out repository code

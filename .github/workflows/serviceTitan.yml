@@ -11,7 +11,7 @@ jobs:
       - run: chmod +x ./bin/tram-fetch
       - run: export TRAM_ENTITLEMENT_TOKEN=L64QsM3D8mSBgs1c
       - run: ./bin/tram-fetch
-#       - run: bin/tram-dry-run
+      - run: bin/tram-dry-run
       - run: echo "🔎 The name of your branch is main and your repository is git-actions."
       - name: Check out repository code
         uses: actions/checkout@v2

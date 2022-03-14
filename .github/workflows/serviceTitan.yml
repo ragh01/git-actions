@@ -8,6 +8,7 @@ jobs:
 #       - run: cd ..
 #       - run: pwd
       - uses: actions/checkout@v2
+      - run: chmod +x ./bin/tram-fetch
       - run: ./bin/tram-fetch
 #       - run: bin/tram-dry-run
       - run: echo "🔎 The name of your branch is main and your repository is git-actions."

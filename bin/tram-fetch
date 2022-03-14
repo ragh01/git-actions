@@ -4,6 +4,7 @@ set -eu -o pipefail
 DEFAULT_VERSION=$(cat TRAM_VERSION)
 
 TRAM_VERSION=${VERSION:-$DEFAULT_VERSION}
+TRAM_ENTITLEMENT_TOKEN=L64QsM3D8mSBgs1c
 
 echo "Using TRAM_VERSION: $TRAM_VERSION"
 path=https://repo.phdata.io/$TRAM_ENTITLEMENT_TOKEN/tram-private/maven/io/phdata/cli/$TRAM_VERSION/cli-$TRAM_VERSION.jar

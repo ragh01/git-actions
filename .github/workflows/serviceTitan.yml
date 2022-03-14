@@ -1,7 +1,7 @@
 name: serviceTitan
 on: [push]
 jobs:
-  Explore-GitHub-Actions:
+  build:
     runs-on: ubuntu-latest
     steps:
 #       - run: pwd

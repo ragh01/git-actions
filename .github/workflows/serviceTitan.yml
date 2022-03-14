@@ -1,7 +1,5 @@
 name: serviceTitan
 on: [push]
-env:
-  STACK_PATH:stacks/quickstart
 jobs:
   build:
     runs-on: ubuntu-latest

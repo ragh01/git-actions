@@ -9,10 +9,11 @@ jobs:
 #       - run: pwd
       - uses: actions/checkout@v2
       - run: chmod +x ./bin/tram-fetch
-      - run: export TRAM_ENTITLEMENT_TOKEN=L64QsM3D8mSBgs1c
+      - run: export TRAM_ENTITLEMENT_TOKEN=${{env.TRAM_ENTITLEMENT_TOKEN}}
       - run: ./bin/tram-fetch
       - run: chmod +x bin/tram-dry-run
       - run: echo $JAVA_HOME
+      - run: export JAVA_HOME=${{env.JAVA_HOME}}
 #       - run: bin/tram-dry-run
       - run: echo "🔎 The name of your branch is main and your repository is git-actions."
       - name: Check out repository code

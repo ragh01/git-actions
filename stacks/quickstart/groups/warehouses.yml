@@ -3,10 +3,10 @@ model:
   name: warehouse
 members:
 
-# trigger:
-#   mapping:
-#     workspace_name: $.fields.customfield_10204
-#   config:
-#     query: "project = ServiceTitan-Demo AND \"Approvals[Approvals]\" = approved() AND status in (\"Waiting for support\") AND \"Request Type\" = \"Create A Snowflake Workspace\" AND createdDate > -14d ORDER BY updatedDate"
-#   generator:
-#     workspace_name: customfield_10207
+trigger:
+  mapping:
+    workspace_name: $.fields.customfield_10204
+  config:
+    query: "project = ServiceTitan-Demo AND \"Approvals[Approvals]\" = approved() AND status in (\"Waiting for support\") AND \"Request Type\" = \"Create A Snowflake Workspace\" AND createdDate > -14d ORDER BY updatedDate"
+  generator:
+    workspace_name: customfield_10207

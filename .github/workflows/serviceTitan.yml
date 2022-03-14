@@ -8,6 +8,7 @@ jobs:
       JAVA_HOME: /usr/lib/jvm/temurin-11-jdk-amd64
       SNOWFLAKE_USER_PASSWORD: abc123
       TRAM_TRIGGER_JIRA_TOKEN: qu4KeWZ3xoKr8Wyv24aY782F
+      TRAM_TRIGGER_GIT_REMOTE_PASSWORD: d3vpV62ABXcrXBuUYQQc
     steps:
 #       - run: pwd
 #       - run: cd ..

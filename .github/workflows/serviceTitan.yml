@@ -4,10 +4,10 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - run: pwd
-      - run: cd ..
-      - run: pwd
-#       - run: bin/tram-fetch
+#       - run: pwd
+#       - run: cd ..
+#       - run: pwd
+      - run: ./bin/tram-fetch
 #       - run: bin/tram-dry-run
       - run: echo "🔎 The name of your branch is main and your repository is git-actions."
       - name: Check out repository code

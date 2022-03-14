@@ -23,6 +23,7 @@ jobs:
       - run: echo ${{env.STACK_PATH}}
       - run: echo $STACK_PATH
       - run: ./bin/tram-dry-run
+      - run: chmod +x bin/tram-provision
       - run: ./bin/tram-provision
       - run: echo "🔎 The name of your branch is main and your repository is git-actions."
       - name: Check out repository code

@@ -3,6 +3,8 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      STACK_PATH: stacks/quickstart
     steps:
 #       - run: pwd
 #       - run: cd ..

@@ -7,7 +7,7 @@ jobs:
       STACK_PATH: stacks/quickstart
       JAVA_HOME: /usr/lib/jvm/temurin-11-jdk-amd64
       SNOWFLAKE_USER_PASSWORD: abc123
-      TRAM_TRIGGER_JIRA_TOKEN: qu4KeWZ3xoKr8Wyv24aY782F
+      TRAM_TRIGGER_JIRA_TOKEN: KaA9Fic0fxZkTkpyeaxMF1F8
       TRAM_TRIGGER_GIT_REMOTE_PASSWORD: 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
     steps:
 #       - run: pwd

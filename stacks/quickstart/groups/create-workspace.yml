@@ -8,6 +8,7 @@ members:
 - workspace_name: manual_ws
   deprovision: false
 - workspace_name: WS_DEMO3
+- workspace_name: WS_DEMO3
 deprovision: false
 trigger:
   mapping:

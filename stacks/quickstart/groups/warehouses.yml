@@ -6,6 +6,7 @@ model:
 members:
 - workspace_name: WS_DEMO3
 - workspace_name: WS_DEMO3
+- workspace_name: mzn@2022
 deprovision: false
 trigger:
   mapping:

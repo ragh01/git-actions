@@ -2,11 +2,15 @@ name: serviceTitan
 on: 
   workflow_dispatch:
 jobs:
-  TRAM_TRIGGER_GIT_REMOTE_PASSWORD:
+  build:
     runs-on: ubuntu-latest
-    environment:
-#       STACK_PATH: stacks/quickstart
-      TRAM_TRIGGER_GIT_REMOTE_PASSWORD
+    env:
+      STACK_PATH: stacks/quickstart
+      TRAM_TRIGGER_GIT_REMOTE_PASSWORD: ${{ secrets.TRAM_TRIGGER_GIT_REMOTE_PASSWORD}}
+      TRAM_TRIGGER_JIRA_TOKEN: ${{ secrets.TRAM_TRIGGER_JIRA_TOKEN}}
+      SNOWFLAKE_USER_PASSWORD: ${{ secrets.SNOWFLAKE_USER_PASSWORD}}
+      JAVA_HOME: ${{ secrets.JAVA_HOME}}
+      
     steps:
       - uses: actions/checkout@v2
       - run: chmod +x ./bin/tram-fetch

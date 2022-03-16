@@ -12,6 +12,7 @@ members:
 - workspace_name: WS_DEMO3
 - workspace_name: abc_2022
 - workspace_name: WS_DEMO3
+- workspace_name: WS_DEMO3
 deprovision: false
 trigger:
   mapping:

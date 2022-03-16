@@ -1,10 +1,12 @@
 name: serviceTitan
-on: [push]
+on: 
+  workflow_dispatch:
 jobs:
-  build:
+  TRAM_TRIGGER_GIT_REMOTE_PASSWORD:
     runs-on: ubuntu-latest
-    env:
-      STACK_PATH: stacks/quickstart
+    environment:
+#       STACK_PATH: stacks/quickstart
+      TRAM_TRIGGER_GIT_REMOTE_PASSWORD
     steps:
       - uses: actions/checkout@v2
       - run: chmod +x ./bin/tram-fetch

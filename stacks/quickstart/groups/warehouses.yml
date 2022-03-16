@@ -6,7 +6,6 @@ model:
 members:
 - workspace_name: WS_DEMO3
 - workspace_name: WS_DEMO3
-- workspace_name: mzn@2022
 - workspace_name: WS_DEMO3
 - workspace_name: test_2022
 - workspace_name: WS_DEMO3

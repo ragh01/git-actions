@@ -5,7 +5,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      STACK_PATH: stacks/quickstart
+      STACK_PATH: ${{secrets.STACK_PATH}}
       JAVA_HOME: /usr/lib/jvm/temurin-11-jdk-amd64
       SNOWFLAKE_USER_PASSWORD: abc123
       TRAM_TRIGGER_JIRA_TOKEN: KaA9Fic0fxZkTkpyeaxMF1F8

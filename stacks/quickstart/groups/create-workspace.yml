@@ -1,7 +1,7 @@
 ---
 adgroup: false
 model:
-  name: fivetran
+  name: project
   defaults:
     warehouse_size: XSMALL
 members:

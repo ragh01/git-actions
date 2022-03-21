@@ -74,29 +74,29 @@ privileges:
     roleName: "dev_Source_RW"
     grantOption: false
 
-  - privilege: "USAGE"
+  - privilege: "ALL PRIVILEGES"
     objectType: "WAREHOUSE"
     objectName: "{{workspace_name}}"
     roleName: "dev_Transform_RO"
     grantOption: false
 
-  - privilege: "USAGE"
-    objectType: "DATABASE"
-    objectName: "{{workspace_name}}_transform"
-    roleName: "dev_Transform_RO"
-    grantOption: false
+  # - privilege: "USAGE"
+  #   objectType: "DATABASE"
+  #   objectName: "{{workspace_name}}_transform"
+  #   roleName: "dev_Transform_RO"
+  #   grantOption: false
 
-  - privilege: "USAGE"
-    objectType: "ALL SCHEMAS IN DATABASE"
-    objectName: "{{workspace_name}}_transform"
-    roleName: "dev_Transform_RO"
-    grantOption: false
+  # - privilege: "USAGE"
+  #   objectType: "ALL SCHEMAS IN DATABASE"
+  #   objectName: "{{workspace_name}}_transform"
+  #   roleName: "dev_Transform_RO"
+  #   grantOption: false
 
-  - privilege: "SELECT"
-    objectType: "FUTURE TABLES IN DATABASE"
-    objectName: "{{workspace_name}}_transform"
-    roleName: "dev_Transform_RO"
-    grantOption: false
+  # - privilege: "SELECT"
+  #   objectType: "FUTURE TABLES IN DATABASE"
+  #   objectName: "{{workspace_name}}_transform"
+  #   roleName: "dev_Transform_RO"
+  #   grantOption: false
 
   - privilege: "USAGE"
     objectType: "WAREHOUSE"

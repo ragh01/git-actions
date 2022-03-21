@@ -31,3 +31,9 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
+
+# STACK_PATH: stacks/quickstart
+      # TRAM_TRIGGER_GIT_REMOTE_PASSWORD: ${{ secrets.TRAM_TRIGGER_GIT_REMOTE_PASSWORD}}
+      # TRAM_TRIGGER_JIRA_TOKEN: ${{ secrets.TRAM_TRIGGER_JIRA_TOKEN}}
+      # SNOWFLAKE_USER_PASSWORD: ${{ secrets.SNOWFLAKE_USER_PASSWORD}}
+      # JAVA_HOME: ${{ secrets.JAVA_HOME}}

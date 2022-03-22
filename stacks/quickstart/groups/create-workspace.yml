@@ -10,10 +10,10 @@ members:
 - workspace_name: test_2022
 - workspace_name: WS_DEMO3
 - workspace_name: abc_2022
-  deprovision: true
+  deprovision: false
 - workspace_name: march_ws
 - workspace_name: march_ws
-deprovision: false
+  deprovision: false
 trigger:
   mapping:
     workspace_name: $.fields.customfield_10204

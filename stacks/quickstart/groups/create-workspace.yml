@@ -10,10 +10,7 @@ members:
 - workspace_name: test_2022
 - workspace_name: WS_DEMO3
 - workspace_name: abc_2022
-  deprovision: false
-- workspace_name: march_ws
-- workspace_name: march_ws
-  deprovision: false
+  deprovision: true
 - workspace_name: march_ws
 deprovision: false
 trigger:

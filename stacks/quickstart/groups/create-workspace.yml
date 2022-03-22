@@ -13,6 +13,7 @@ members:
   deprovision: true
 - workspace_name: march_ws
 - workspace_name: april_ws
+  deprovision: true
 deprovision: false
 trigger:
   mapping:

@@ -14,6 +14,7 @@ members:
 - workspace_name: WS_DEMO3
 - workspace_name: WS_DEMO3
 - workspace_name: WS_DEMO3
+- workspace_name: march_ws
 deprovision: false
 trigger:
   mapping:

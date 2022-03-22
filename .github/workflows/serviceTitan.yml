@@ -11,27 +11,15 @@ jobs:
       TRAM_TRIGGER_JIRA_TOKEN: ${{ secrets.TRAM_TRIGGER_JIRA_TOKEN}}
       SNOWFLAKE_USER_PASSWORD: ${{ secrets.SNOWFLAKE_USER_PASSWORD}}
       JAVA_HOME: ${{ secrets.JAVA_HOME}}
-#       STACK_PATH: stacks/quickstart
-#       JAVA_HOME: /usr/lib/jvm/temurin-11-jdk-amd64
-#       SNOWFLAKE_USER_PASSWORD: abc123
-#       TRAM_TRIGGER_JIRA_TOKEN: KaA9Fic0fxZkTkpyeaxMF1F8
-#       TRAM_TRIGGER_GIT_REMOTE_PASSWORD: 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
     steps:
       - uses: actions/checkout@v2
       - run: chmod +x ./bin/tram-fetch
       - run: export TRAM_ENTITLEMENT_TOKEN=${{env.TRAM_ENTITLEMENT_TOKEN}}
       - run: ./bin/tram-fetch
       - run: chmod +x bin/tram-dry-run
-      - run: echo $JAVA_HOME
-      - run: export JAVA_HOME=${{env.JAVA_HOME}}
-      - run: echo ${{env.STACK_PATH}}
-      - run: echo $STACK_PATH
       - run: ./bin/tram-dry-run
       - run: chmod +x bin/tram-provision
       - run: ./bin/tram-provision
-      - run: echo "🔎 The name of your branch is main and your repository is git-actions."
-      - name: Check out repository code
-        uses: actions/checkout@v2
       - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner.."
       - run: echo "🖥️ The workflow is now ready to test your code on the runner."
       - name: List files in the repository

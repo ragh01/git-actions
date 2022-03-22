@@ -12,6 +12,7 @@ members:
 - workspace_name: abc_2022
   deprovision: true
 - workspace_name: march_ws
+- workspace_name: march_ws
 deprovision: false
 trigger:
   mapping:

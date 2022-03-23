@@ -5,15 +5,6 @@ model:
   defaults:
     warehouse_size: XSMALL
 members:
-- workspace_name: manual_ws
-  deprovision: false
-- workspace_name: test_2022
-- workspace_name: WS_DEMO3
-- workspace_name: abc_2022
-  deprovision: true
-- workspace_name: march_ws
-- workspace_name: april_ws
-  deprovision: true
 - workspace_name: june_ws
 deprovision: false
 trigger:

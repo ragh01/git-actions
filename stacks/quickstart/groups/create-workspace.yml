@@ -5,7 +5,6 @@ model:
   defaults:
     warehouse_size: XSMALL
 members:
-- workspace_name: june_ws
 deprovision: false
 trigger:
   mapping:

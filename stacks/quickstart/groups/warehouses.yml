@@ -4,7 +4,6 @@ model:
   name: warehouse
   defaults: {}
 members:
-- workspace_name: june_ws
 deprovision: false
 trigger:
   mapping:

@@ -5,6 +5,7 @@ model:
   defaults: {}
 members:
 - workspace_name: st_ws
+- workspace_name: hp_ws
 deprovision: false
 trigger:
   mapping:

@@ -6,6 +6,7 @@ model:
     warehouse_size: XSMALL
 members:
 - workspace_name: office
+- workspace_name: phdata_ws
 deprovision: false
 trigger:
   mapping:

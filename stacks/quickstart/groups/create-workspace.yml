@@ -5,9 +5,6 @@ model:
   defaults:
     warehouse_size: XSMALL
 members:
-- workspace_name: st_ws
-- workspace_name: hp_ws
-- workspace_name: temp123
 deprovision: false
 trigger:
   mapping:

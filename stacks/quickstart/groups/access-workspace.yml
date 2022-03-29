@@ -7,11 +7,14 @@ members:
 - username: man
   access: RO
   workspace_name: manual_ws
+- access: RW
+  workspace_name: office
+  username: rmittal
 deprovision: false
 trigger:
   mapping:
-    username: $.fields.reporter.emailAddress
     workspace_name: $.fields.customfield_10207.value
+    username: $.fields.reporter.emailAddress
     access: $.fields.customfield_10205.value
   config:
     query: "project = ServiceTitan-Demo AND \"Approvals[Approvals]\" = approved() AND status in (\"Waiting for support\") AND \"Request Type\" = \"Request Access To A Snowflake Workspace\" AND createdDate > -14d ORDER BY updatedDate"

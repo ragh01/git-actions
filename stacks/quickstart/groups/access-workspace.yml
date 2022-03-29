@@ -7,18 +7,6 @@ members:
 - username: man
   access: RO
   workspace_name: manual_ws
-- access: RW
-  workspace_name: st_ws
-  username: rmittal
-- access: RW
-  workspace_name: hp_ws
-  username: rmittal
-- access: RO
-  workspace_name: hp_ws
-  username: rmittal
-- access: RW
-  workspace_name: temp123
-  username: rmittal
 deprovision: false
 trigger:
   mapping:

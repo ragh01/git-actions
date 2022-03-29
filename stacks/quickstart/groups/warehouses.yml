@@ -8,6 +8,7 @@ members:
 - workspace_name: hp_ws
 - workspace_name: temp123
 - workspace_name: office
+- workspace_name: phdata_ws
 deprovision: false
 trigger:
   mapping:
